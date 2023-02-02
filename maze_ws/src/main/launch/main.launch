@@ -1,0 +1,15 @@
+<launch>
+  <arg name="size" default="10"/>
+  <param name="size" value="$(arg size)"/>
+  <node
+    pkg="main"
+    type="main.py"
+    name="main" 
+    output="screen"
+    args="$(arg size)"
+  />
+<!--
+  <include file="$(find main)/launch/turtlebot_in_maze.launch" />
+-->
+
+</launch>

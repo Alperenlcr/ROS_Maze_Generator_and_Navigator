@@ -1,0 +1,18 @@
+<launch>
+<!--
+  <arg name="size" default="2"/>
+  <param name="size" value="$(arg size)"/>
+
+  <node pkg="maze_main" type="main" name="main"  output="screen">
+  </node>
+-->
+  <arg name="size" default="10"/>
+  <param name="size" value="$(arg size)"/>
+  <node
+    pkg="main"
+    type="main.py"
+    name="main" 
+    output="screen"
+    args="$(arg size)"
+  />
+</launch>
